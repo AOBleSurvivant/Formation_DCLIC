@@ -78,5 +78,7 @@ let a = 10, b = 3, x = 5, y = "5";
  let not_isSteacher = !isTeacher
  console.log(`!isTeacher :${not_isSteacher}`)
  console.log(!isStudent)
-//
-let n = 7;// n += 3; n -= 2; n*=4; n /= 
+//Le ternaire
+a = 19;
+let resul = (a >= 18)? "Majeur":"Mineur";
+console.log(resul)
