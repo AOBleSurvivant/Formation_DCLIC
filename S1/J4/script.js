@@ -138,23 +138,6 @@ for(let n of n_mix){
   console.log(`Elément : ${n}`)
 }
 
-console.log('___Dévoir___')
-console.log("Exo1")
-let prenoms = ["Boubacar", "Amadou", "Oumou", "Djenaba"];
-for(let prenom of prenoms){
-  console.log(`Bonjour ${prenom}`);
-}
-
-console.log("Exo2")
-const users = {
-  nom : "Diallo",
-  age_u : 25,
-  role :"Etudiant"
-}
-for(let user in users){
-  console.log(user +" : "+users[user] )
-}
-
 const Voitures = {
   marque : "Toyota ",
   modele : "Corola",
@@ -162,11 +145,182 @@ const Voitures = {
 };
 for(let voiture in Voitures){
   console.log(voiture + " : " + Voitures[voiture]);
-}
+};
+
 console.log("_______exo3___")
 const fruits_exo = ["Pomme", "Banane", "Orange"];
 fruits_exo.forEach(function(n){
   console.log("J'aime :"+ n)
 })
+
+//___________________DEVOIR_______________________
+console.log('___Dévoir___')
+                    console.log("Exo1")
+let prenoms = ["Boubacar", "Amadou", "Oumou", "Djenaba"];
+for(let prenom of prenoms){
+  console.log(`Bonjour ${prenom}`);
+}
+
+                    console.log("Exo2")
+const users = {
+  nom : "Bah",
+  age_u : 25,
+  role :"Etudiant"
+}
+for(let user in users){
+  console.log(user +" : "+users[user] )
+}
+
+console.log('_____FONCTION_______')
+/*les fonctions sont des blocs de code réutilisables conçus pour effectuer une tâche spécifique. Elles sont essentielles en programmation, car elles permettent d’organiser, de structurer et de réutiliser le code.
+
+1. Déclaration de fonction (classique): function nom() {}
+function saluer() {
+  console.log("Bonjour !");
+}
+saluer(); // Affiche "Bonjour !"
+
+2. Fonction avec paramètres et retour
+function addition(a, b) {
+  return a + b;
+}
+let resultat = addition(5, 3); // 8
+
+3. Fonction anonyme: function() {}
+C’est une fonction sans nom, souvent utilisée comme valeur (dans les callbacks par exemple) :
+let direBonjour = function() {
+  console.log("Salut !");
+};
+direBonjour(); // Affiche "Salut !"
+
+4. Fonction fléchée (arrow function): () => {} ou param => expr
+
+-Plus courte et très utilisée en ES6+ :
+let multiplier = (x, y) => x * y;
+console.log(multiplier(2, 3)); // 6
+
+-Avec un seul paramètre et un seul retour :
+let doubler = x => x * 2;
+
+5. Fonction comme argument (callback): fonction(param => { ... })
+function traiter(callback) {
+  console.log("Début");
+  callback();
+  console.log("Fin");
+}
+
+traiter(() => console.log("Traitement en cours..."));
+
+6. Fonction imbriquée (fonction dans une autre)
+function exterieur() {
+  function interieur() {
+    console.log("Je suis à l'intérieur !");
+  }
+  interieur();
+}
+exterieur();
+
+7. Fonction constructeur (avec new): function Nom() { this... }
+Utilisée pour créer des objets :
+function Personne(nom) {
+  this.nom = nom;
+}
+let p1 = new Personne("Alpha");
+console.log(p1.nom); // Alpha
+
+8. Fonction récursive
+Une fonction qui s'appelle elle-même :
+function compteARebours(n) {
+  if (n > 0) {
+    console.log(n);
+    compteARebours(n - 1);
+  } else {
+    console.log("C'est fini !");
+  }
+}
+compteARebours(3);
+
+9. Fonction dans un objet (méthode): objet = { f: function() {} }
+let voiture = {
+  marque: "Toyota",
+  demarrer: function() {
+    console.log("Vroum !");
+  }
+};
+voiture.demarrer();
+
+
+*/
+
+console.log("_____Portée des variables_____")
+/** En JavaScript, la portée des variables (en anglais scope) détermine où une variable est accessible dans ton code. Comprendre cela est essentiel pour éviter des bugs liés à des variables invisibles ou écrasées. 
+ 
+*/
+
+/*exo: creer une fonction, passer la un paramètre nom et afficher dans la console "Bonjour + nom"; Vous affichez au moins 5 messages avec des arguments differents.*/
+
+let ma_premiere_f = function(nom_fon = "Ajouter un nom comme argument"){
+  let nom_f = console.log(`Nom complet : ${nom_fon};`);
+  return nom_f;
+}
+tab_f = ["Alpha Oumar Barry", "Elhadj Oumar", "Boubacar Sow", "Amadou Tidiane Bah", "Pascal"];
+
+for(t of tab_f){
+  ma_premiere_f(t);
+}
+
+console.log("____Methode____");
+let ma_fonction_uno = function(nom_ = "AOB" , prenom_ = "LeSurvivant"){
+  _fon = console.log(`Votre nom est : ${nom_} et Votre prénom est : ${prenom_}`);
+  return _fon;
+}
+ma_fonction_uno("Elhadj Oumar", "Diallo");
+ma_fonction_uno("Boubacar", "Sow");
+ma_fonction_uno("Amadou Tidiane", "Bah");
+ma_fonction_uno("Pascal", "Maomy");
+ma_fonction_uno("Ramatoulaye", "Diallo");
+
+console.log("___________Exo de consolidation____________")
+  console.log("1. Avec map() ");
+
+  const pre_nom = ["Ali", "Mariam", "Binta", "Oumar"];
+  //Ajouter "Bonjour" devant chaque prénom.
+ const salutation = pre_nom.map(nom__ => `Bonjour ${nom__}`);
+ console.log(salutation);
+
+console.log("Compter les prenoms commençants par A");
+
+/*___Déclarer une fonction nom et à linterieur vous créez _*/
+
+function additions(a, b){
+      return a  + b;
+}
+console.log(additions(5, 8));
+
+/* const prenoms = ['Ali', 'Mariam', 'Binta', 'Oumar'];
+
+// 1. Ajouter "Bonjour" devant chaque prénom
+const salutation = prenoms.map(nom => `Bonjour ${nom}`);
+console.log(salutation);
+// ["Bonjour Ali", "Bonjour Mariam", "Bonjour Binta", "Bonjour Oumar"]
+
+// 2. Compter les prénoms commençant par "A"
+const nbA = prenoms.filter(nom => nom.startsWith('A')).length;
+console.log(nbA); // 1
+
+
+
+const salutation2 = prenoms.map(function(nom) {
+  return 'Bonjour ' + nom;
+});
+
+const nbA2 = prenoms.filter(function(nom) {
+  return nom.startsWith('A');
+}).length;
+
+console.log(salutation2);
+console.log(nbA2);
+
+*/
 
 

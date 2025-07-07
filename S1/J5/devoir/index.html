@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Page Web Événements</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="mainHeader">Mon Header</header>
+
+  <div class="button-container">
+    <button class="btn">Bouton 1</button>
+    <button class="btn">Bouton 2</button>
+    <button class="btn">Bouton 3</button>
+  </div>
+
+  <div class="box" id="hoverBox">Survole-moi</div>
+
+  <form id="myForm">
+    <input type="text" placeholder="Tapez quelque chose" />
+    <input type="submit" value="Envoyer" />
+  </form>
+
+  <p id="keyDisplay">Touche pressée : </p>
+
+  <div id="screenSize">Taille écran : </div>
+
+  <div id="parent">
+    <div id="child">Clique ici (Propagation arrêtée)</div>
+  </div>
+
+  <button id="oneClickBtn">Clique-moi avant 5s</button>
+
+  <input type="color" id="colorPicker" />
+
+  <script src="script.js"></script>
+</body>
+</html>
